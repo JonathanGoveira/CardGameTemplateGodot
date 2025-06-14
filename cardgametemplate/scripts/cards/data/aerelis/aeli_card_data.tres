@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=3 format=3 uid="uid://dfh03sg6oh3qk"]
+
+[ext_resource type="Texture2D" uid="uid://cptc6lofd6j4w" path="res://assets/aerelis.png" id="1_6545m"]
+[ext_resource type="Script" uid="uid://1crh8aj4cmt3" path="res://scripts/cards/card_data.gd" id="1_onkx7"]
+
+[resource]
+script = ExtResource("1_onkx7")
+imagem_carta = ExtResource("1_6545m")
+nome = "Aeli"
+reino = "Aerelis"
+dano_base = 4
+descricao_dom = "Após atacar, retorna ao topo do deck ao final do turno."
+metadata/_custom_type_script = "uid://1crh8aj4cmt3"

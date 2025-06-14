@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://bkajiysgoiwdc"]
+
+[ext_resource type="Script" uid="uid://1crh8aj4cmt3" path="res://scripts/cards/card_data.gd" id="1_33i62"]
+[ext_resource type="Texture2D" uid="uid://8fae1hn3xobh" path="res://assets/lumestral.png" id="1_gl3fi"]
+[ext_resource type="Script" uid="uid://dfv4llsl86v8q" path="res://scripts/cards/effects/lumestral/krav_effect.gd" id="1_wpsmd"]
+
+[sub_resource type="Resource" id="Resource_chkxl"]
+script = ExtResource("1_wpsmd")
+metadata/_custom_type_script = "uid://dfv4llsl86v8q"
+
+[resource]
+script = ExtResource("1_33i62")
+imagem_carta = ExtResource("1_gl3fi")
+nome = "Krav"
+reino = "Lumestral"
+dano_base = 3
+descricao_dom = "Se for a primeira carta jogada no turno, ganha +1 de dano."
+dom = SubResource("Resource_chkxl")
+metadata/_custom_type_script = "uid://1crh8aj4cmt3"

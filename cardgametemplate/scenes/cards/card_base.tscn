@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2f0gstxcgifp"]
+
+[ext_resource type="Script" uid="uid://0n5l5kkek0l1" path="res://scripts/cards/card_base.gd" id="1_gqcvk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vvmxj"]
+font_size = 15
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sf5il"]
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uh4ib"]
+font_size = 9
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[node name="CardBase" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_gqcvk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="nome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 12.0
+offset_right = 63.0
+offset_bottom = 35.0
+label_settings = SubResource("LabelSettings_vvmxj")
+horizontal_alignment = 1
+
+[node name="dano" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 12.0
+offset_right = 20.0
+offset_bottom = 35.0
+label_settings = SubResource("LabelSettings_sf5il")
+horizontal_alignment = 1
+
+[node name="descricaoDom" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 98.0
+label_settings = SubResource("LabelSettings_uh4ib")
+autowrap_mode = 2
