@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://yuveqbc7xvx4"]
+
+[ext_resource type="PackedScene" uid="uid://dkuk5uaw56b8f" path="res://scenes/board.tscn" id="1_kinr6"]
+[ext_resource type="PackedScene" uid="uid://de5yyhfqcn1gb" path="res://scenes/cards/card_template.tscn" id="2_rca61"]
+
+[node name="GameManager" type="Node"]
+
+[node name="UIManager" type="CanvasLayer" parent="."]
+
+[node name="AudioManager" type="Node" parent="."]
+
+[node name="Board" parent="." instance=ExtResource("1_kinr6")]
+offset_left = 171.0
+offset_top = 25.0
+offset_right = 171.0
+offset_bottom = 25.0
+
+[node name="CardTemplate" parent="." instance=ExtResource("2_rca61")]
+position = Vector2(139, 356)
+
+[node name="CardTemplate2" parent="." instance=ExtResource("2_rca61")]
+position = Vector2(234, 357)
+
+[node name="CardTemplate3" parent="." instance=ExtResource("2_rca61")]
+position = Vector2(334, 357)
+
+[node name="CardTemplate4" parent="." instance=ExtResource("2_rca61")]
+position = Vector2(437, 356)

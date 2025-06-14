@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dkuk5uaw56b8f"]
+
+[node name="Board" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Layout" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="EnemyRow" type="HBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="Slot1" type="Panel" parent="Margin/Layout/EnemyRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 3
+
+[node name="Slot2" type="Panel" parent="Margin/Layout/EnemyRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 3
+
+[node name="Slot3" type="Panel" parent="Margin/Layout/EnemyRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 3
+
+[node name="Margin" type="MarginContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="PlayerRow" type="HBoxContainer" parent="Margin/Layout"]
+layout_mode = 2
+
+[node name="Slot1" type="Panel" parent="Margin/Layout/PlayerRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="Slot2" type="Panel" parent="Margin/Layout/PlayerRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="Slot3" type="Panel" parent="Margin/Layout/PlayerRow"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+
+[node name="PlayerCards" type="Node2D" parent="."]
+
+[node name="EnemyCards" type="Node2D" parent="."]

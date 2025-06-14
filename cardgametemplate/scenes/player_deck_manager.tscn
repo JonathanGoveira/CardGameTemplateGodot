@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bi6o4an0e0vai"]
+
+[node name="PlayerDeck" type="Node"]
+
+[node name="Deck" type="Node" parent="."]
+
+[node name="DiscardPile" type="Node" parent="."]
+
+[node name="Banished" type="Node" parent="."]
+
+[node name="Hand" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="OfferMana" type="Node" parent="."]
