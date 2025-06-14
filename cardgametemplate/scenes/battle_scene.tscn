@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://yuveqbc7xvx4"]
 
-[ext_resource type="PackedScene" uid="uid://dkuk5uaw56b8f" path="res://scenes/board.tscn" id="1_kinr6"]
+[ext_resource type="PackedScene" uid="uid://dkuk5uaw56b8f" path="res://scenes/battle/board.tscn" id="1_kinr6"]
 [ext_resource type="PackedScene" uid="uid://b2f0gstxcgifp" path="res://scenes/cards/card_base.tscn" id="2_rca61"]
 [ext_resource type="Resource" uid="uid://cnjqx25hjbo5x" path="res://scripts/cards/data/nymara/gluba_card_data.tres" id="3_8qdv8"]
 [ext_resource type="Resource" uid="uid://bkajiysgoiwdc" path="res://scripts/cards/data/lumestral/krav_card_data.tres" id="4_8qdv8"]
