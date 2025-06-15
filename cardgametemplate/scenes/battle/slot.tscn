@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://iuhxsai47yro"]
+
+[ext_resource type="Script" uid="uid://brvy8didbdb0s" path="res://scripts/batlle/slot.gd" id="1_q2d2s"]
+
+[node name="Slot" type="Control"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 80.0
+offset_bottom = 120.0
+script = ExtResource("1_q2d2s")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 120.0

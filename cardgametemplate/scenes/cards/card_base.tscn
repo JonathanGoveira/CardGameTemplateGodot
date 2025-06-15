@@ -17,16 +17,19 @@ outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
 [node name="CardBase" type="Control"]
+custom_minimum_size = Vector2(80, 120)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_default_cursor_shape = 2
 script = ExtResource("1_gqcvk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="nome" type="Label" parent="."]
 layout_mode = 0

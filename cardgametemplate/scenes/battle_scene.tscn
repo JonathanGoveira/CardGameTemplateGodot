@@ -19,19 +19,19 @@ offset_top = 25.0
 offset_right = 171.0
 offset_bottom = 25.0
 
-[node name="Gluba" parent="." instance=ExtResource("2_rca61")]
-offset_left = 101.0
-offset_top = 230.0
-offset_right = 141.0
-offset_bottom = 270.0
-dados = ExtResource("3_8qdv8")
-
 [node name="Krav" parent="." instance=ExtResource("2_rca61")]
 offset_left = 226.0
 offset_top = 218.0
 offset_right = 266.0
 offset_bottom = 258.0
 dados = ExtResource("4_8qdv8")
+
+[node name="Gluba" parent="." instance=ExtResource("2_rca61")]
+offset_left = 101.0
+offset_top = 230.0
+offset_right = 141.0
+offset_bottom = 270.0
+dados = ExtResource("3_8qdv8")
 
 [node name="Aeli" parent="." instance=ExtResource("2_rca61")]
 offset_left = 346.0
