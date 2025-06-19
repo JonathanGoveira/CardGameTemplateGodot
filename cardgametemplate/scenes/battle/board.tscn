@@ -8,32 +8,39 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_qmi5o")
 
-[node name="Margin" type="MarginContainer" parent="."]
+[node name="EnemyBoard" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_right = 248.0
+offset_bottom = 120.0
+
+[node name="Inimigo" parent="EnemyBoard" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
+[node name="Inimigo2" parent="EnemyBoard" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
+[node name="Inimigo3" parent="EnemyBoard" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
+[node name="DeckManager" type="Node" parent="."]
+
+[node name="HandPlayer" type="HBoxContainer" parent="."]
+layout_mode = 2
+offset_top = 128.0
+offset_right = 248.0
+offset_bottom = 128.0
+
+[node name="VisualDeck" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="VisualDeck"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Layout" type="VBoxContainer" parent="Margin"]
-layout_mode = 2
-
-[node name="EnemyRow" type="HBoxContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="Inimigo" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
-layout_mode = 2
-
-[node name="Inimigo2" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
-layout_mode = 2
-
-[node name="Inimigo3" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
-layout_mode = 2
-
-[node name="Margin" type="MarginContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="PlayerRow" type="HBoxContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="PlayerCards" type="Node2D" parent="."]
-
-[node name="EnemyCards" type="Node2D" parent="."]
+[node name="ButtonTurn" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
