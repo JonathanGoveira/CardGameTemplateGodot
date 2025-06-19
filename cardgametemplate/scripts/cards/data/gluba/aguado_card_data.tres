@@ -11,8 +11,8 @@ metadata/_custom_type_script = "uid://c1jaekvepxu27"
 [resource]
 script = ExtResource("1_62hcd")
 imagem_carta = ExtResource("2_2euja")
-nome = "Gluba"
-reino = "Nymara"
+nome = "Aguado"
+reino = "Gluba"
 dano_base = 2
 descricao_dom = "Ataca inimigos adjacentes"
 dom = SubResource("Resource_vbjv7")

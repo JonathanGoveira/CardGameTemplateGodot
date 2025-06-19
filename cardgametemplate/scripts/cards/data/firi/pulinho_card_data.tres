@@ -11,8 +11,8 @@ metadata/_custom_type_script = "uid://dfv4llsl86v8q"
 [resource]
 script = ExtResource("1_33i62")
 imagem_carta = ExtResource("1_gl3fi")
-nome = "Krav"
-reino = "Lumestral"
+nome = "Pulinho"
+reino = "Firi"
 dano_base = 3
 descricao_dom = "Se for a primeira carta jogada no turno, ganha +1 de dano."
 dom = SubResource("Resource_chkxl")

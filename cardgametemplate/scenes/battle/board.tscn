@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkuk5uaw56b8f"]
 
 [ext_resource type="Script" uid="uid://c0giw7bs8lw4i" path="res://scripts/batlle/board.gd" id="1_qmi5o"]
-[ext_resource type="PackedScene" uid="uid://iuhxsai47yro" path="res://scenes/battle/slot.tscn" id="1_yb8wc"]
+[ext_resource type="PackedScene" uid="uid://coxglu8wkptdt" path="res://scenes/battle/enemy_board.tscn" id="2_qmi5o"]
 
 [node name="Board" type="Control"]
 layout_mode = 3
@@ -19,19 +19,19 @@ layout_mode = 2
 [node name="EnemyRow" type="HBoxContainer" parent="Margin/Layout"]
 layout_mode = 2
 
+[node name="Inimigo" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
+[node name="Inimigo2" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
+[node name="Inimigo3" parent="Margin/Layout/EnemyRow" instance=ExtResource("2_qmi5o")]
+layout_mode = 2
+
 [node name="Margin" type="MarginContainer" parent="Margin/Layout"]
 layout_mode = 2
 
 [node name="PlayerRow" type="HBoxContainer" parent="Margin/Layout"]
-layout_mode = 2
-
-[node name="Slot" parent="Margin/Layout/PlayerRow" instance=ExtResource("1_yb8wc")]
-layout_mode = 2
-
-[node name="Slot2" parent="Margin/Layout/PlayerRow" instance=ExtResource("1_yb8wc")]
-layout_mode = 2
-
-[node name="Slot3" parent="Margin/Layout/PlayerRow" instance=ExtResource("1_yb8wc")]
 layout_mode = 2
 
 [node name="PlayerCards" type="Node2D" parent="."]
