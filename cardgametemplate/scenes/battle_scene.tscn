@@ -1,11 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://yuveqbc7xvx4"]
+[gd_scene load_steps=2 format=3 uid="uid://yuveqbc7xvx4"]
 
 [ext_resource type="PackedScene" uid="uid://dkuk5uaw56b8f" path="res://scenes/battle/board.tscn" id="1_kinr6"]
-[ext_resource type="PackedScene" uid="uid://b2f0gstxcgifp" path="res://scenes/cards/card_base.tscn" id="2_rca61"]
-[ext_resource type="Resource" uid="uid://cnjqx25hjbo5x" path="res://scripts/cards/data/gluba/aguado_card_data.tres" id="3_8qdv8"]
-[ext_resource type="Resource" uid="uid://bkajiysgoiwdc" path="res://scripts/cards/data/firi/pulinho_card_data.tres" id="4_8qdv8"]
-[ext_resource type="Resource" uid="uid://dfh03sg6oh3qk" path="res://scripts/cards/data/penuva/penudinho_card_data.tres" id="5_1i8jf"]
-[ext_resource type="Resource" uid="uid://d21nvole0t8r5" path="res://scripts/cards/data/trufi/folinho_card_data.tres" id="6_svpld"]
 
 [node name="GameManager" type="Node"]
 
@@ -18,31 +13,3 @@ offset_left = 171.0
 offset_top = 25.0
 offset_right = 171.0
 offset_bottom = 25.0
-
-[node name="Krav" parent="." instance=ExtResource("2_rca61")]
-offset_left = 226.0
-offset_top = 218.0
-offset_right = 266.0
-offset_bottom = 258.0
-dados = ExtResource("4_8qdv8")
-
-[node name="Gluba" parent="." instance=ExtResource("2_rca61")]
-offset_left = 101.0
-offset_top = 230.0
-offset_right = 141.0
-offset_bottom = 270.0
-dados = ExtResource("3_8qdv8")
-
-[node name="Aeli" parent="." instance=ExtResource("2_rca61")]
-offset_left = 346.0
-offset_top = 224.0
-offset_right = 386.0
-offset_bottom = 264.0
-dados = ExtResource("5_1i8jf")
-
-[node name="Muvu" parent="." instance=ExtResource("2_rca61")]
-offset_left = 488.0
-offset_top = 229.0
-offset_right = 528.0
-offset_bottom = 269.0
-dados = ExtResource("6_svpld")
