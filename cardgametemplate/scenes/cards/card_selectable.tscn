@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://cj2t3os33leus"]
+
+[ext_resource type="Script" uid="uid://bdfm1l71rn4tq" path="res://scripts/cards/card_selectable.gd" id="1_7h8ka"]
+[ext_resource type="Resource" uid="uid://bkajiysgoiwdc" path="res://scripts/cards/data/firi/pulinho_card_data.tres" id="2_qed0t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qed0t"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_l1gix"]
+font_size = 14
+shadow_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_diqu7"]
+resource_local_to_scene = true
+line_spacing = 1.0
+paragraph_spacing = 1.0
+font_size = 7
+
+[node name="CardSelectable" type="Control"]
+custom_minimum_size = Vector2(80, 120)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_7h8ka")
+dados = ExtResource("2_qed0t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Nome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 16.0
+offset_right = 66.0
+offset_bottom = 39.0
+label_settings = SubResource("LabelSettings_qed0t")
+
+[node name="Dano" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.112
+offset_left = 1.0
+offset_top = 12.0
+offset_right = 23.0
+offset_bottom = 21.56
+label_settings = SubResource("LabelSettings_l1gix")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Dom" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 45.0
+offset_right = 72.0
+offset_bottom = 107.0
+label_settings = SubResource("LabelSettings_diqu7")
+autowrap_mode = 2
+
+[node name="MarcadorSelecionado" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 120.0
+mouse_filter = 2
+color = Color(0.25098, 0.466667, 0.466667, 0.352941)

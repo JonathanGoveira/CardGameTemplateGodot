@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CardGameTemplate"
-run/main_scene="uid://yuveqbc7xvx4"
+run/main_scene="uid://cqvjbvtl0q3go"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
