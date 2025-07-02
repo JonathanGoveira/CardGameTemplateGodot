@@ -57,4 +57,10 @@ func atualizar_ui():
 	label.text = "Selecionadas: %d / %d" % [selecionadas.size(), max_cartas_selecionadas]
 
 	var botao = get_node(botao_iniciar_path)
-	botao.disabled = selecionadas.size() != max_cartas_selecionadas
+	#botao.disabled = selecionadas.size() != max_cartas_selecionadas
+
+
+func on_start_pressed() -> void:
+	var caminho_batalha = "res://scenes/battle_scene.tscn"
+	get_tree().change_scene_to_file(caminho_batalha)
+	print("Mudando para a cena de batalha...")

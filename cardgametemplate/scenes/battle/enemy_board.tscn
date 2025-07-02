@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://coxglu8wkptdt"]
 
-[ext_resource type="Script" uid="uid://brvy8didbdb0s" path="res://scripts/batlle/enemy_battle.gd" id="1_at28c"]
+[ext_resource type="Script" uid="uid://brvy8didbdb0s" path="res://scripts/battle/enemy_battle.gd" id="1_at28c"]
 
 [node name="Inimigo" type="Control"]
 custom_minimum_size = Vector2(80, 120)

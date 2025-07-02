@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dkuk5uaw56b8f"]
 
-[ext_resource type="Script" uid="uid://c0giw7bs8lw4i" path="res://scripts/batlle/board.gd" id="1_qmi5o"]
+[ext_resource type="Script" uid="uid://c0giw7bs8lw4i" path="res://scripts/battle/board.gd" id="1_qmi5o"]
 [ext_resource type="PackedScene" uid="uid://coxglu8wkptdt" path="res://scenes/battle/enemy_board.tscn" id="2_qmi5o"]
-[ext_resource type="Script" uid="uid://bgiwrxu11p2yt" path="res://scripts/batlle/deck_manager.gd" id="3_aesho"]
+[ext_resource type="Script" uid="uid://bgiwrxu11p2yt" path="res://scripts/battle/deck_manager.gd" id="3_aesho"]
 [ext_resource type="PackedScene" uid="uid://b2f0gstxcgifp" path="res://scenes/cards/card_base.tscn" id="4_x7pv8"]
 [ext_resource type="Resource" uid="uid://bkajiysgoiwdc" path="res://scripts/cards/data/firi/pulinho_card_data.tres" id="5_0ecky"]
 [ext_resource type="Resource" uid="uid://d21nvole0t8r5" path="res://scripts/cards/data/trufi/folinho_card_data.tres" id="6_0yp24"]
