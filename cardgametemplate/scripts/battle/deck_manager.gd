@@ -3,7 +3,7 @@ extends Node
 
 @export var carta_base_scene: PackedScene
 @export var mao_container: NodePath
-@export var max_cartas_mao: int = 3
+@export var max_cartas_mao: int = 5
 
 # Cartas iniciais reais do deck
 @export var cartas_iniciais: Array[Resource]  # Esperado: CardData
@@ -13,7 +13,7 @@ var cartas_na_mao: Array = []
 
 func _ready():
 	# Clona as cartas para o deck (evita sobrescrever o resource original)
-	for carta_resource in cartas_iniciais:
+	for carta_resource in GameState.cartas_selecionadas:
 		var copia = carta_resource.duplicate()
 		deck.append(copia)
 
