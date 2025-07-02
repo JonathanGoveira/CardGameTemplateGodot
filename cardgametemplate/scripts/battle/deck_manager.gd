@@ -2,7 +2,7 @@
 extends Node
 
 @export var carta_base_scene: PackedScene
-@export var mao_container: NodePath
+@export var mao_container: NodePath = "Board/PlayerHand"
 @export var max_cartas_mao: int = 5
 
 # Cartas iniciais reais do deck

@@ -1,17 +1,8 @@
-[gd_scene format=3 uid="uid://bi6o4an0e0vai"]
+[gd_scene load_steps=3 format=3 uid="uid://bi6o4an0e0vai"]
+
+[ext_resource type="Script" uid="uid://bgiwrxu11p2yt" path="res://scripts/battle/deck_manager.gd" id="1_fm1m1"]
+[ext_resource type="PackedScene" uid="uid://b2f0gstxcgifp" path="res://scenes/cards/card_base.tscn" id="2_71vvo"]
 
 [node name="PlayerDeck" type="Node"]
-
-[node name="Deck" type="Node" parent="."]
-
-[node name="DiscardPile" type="Node" parent="."]
-
-[node name="Banished" type="Node" parent="."]
-
-[node name="Hand" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="OfferMana" type="Node" parent="."]
+script = ExtResource("1_fm1m1")
+carta_base_scene = ExtResource("2_71vvo")

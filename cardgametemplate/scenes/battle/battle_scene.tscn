@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://yuveqbc7xvx4"]
+
+[ext_resource type="Script" uid="uid://c8s1juegtk8cj" path="res://scripts/cards/turn_manager.gd" id="2_6iigb"]
+[ext_resource type="PackedScene" uid="uid://bi6o4an0e0vai" path="res://scenes/battle/player_deck_manager.tscn" id="2_pu738"]
+[ext_resource type="PackedScene" uid="uid://coxglu8wkptdt" path="res://scenes/battle/enemy_board.tscn" id="3_pu738"]
+
+[node name="GameManager" type="Node"]
+
+[node name="UIManager" type="CanvasLayer" parent="."]
+
+[node name="AudioManager" type="Node" parent="."]
+
+[node name="TurnManager" type="Node" parent="."]
+script = ExtResource("2_6iigb")
+botao_encerrar_turno_path = NodePath("../board/Button")
+enemy_board_path = NodePath("../board/Enemies")
+deck_manager_path = NodePath("../board/PlayerDeck")
+
+[node name="board" type="Control" parent="."]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 248.0
+offset_bottom = 128.0
+
+[node name="Enemies" type="HBoxContainer" parent="board"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -40.0
+offset_right = 40.0
+offset_bottom = 120.0
+grow_horizontal = 2
+
+[node name="Inimigo" parent="board/Enemies" instance=ExtResource("3_pu738")]
+layout_mode = 2
+
+[node name="PlayerDeck" parent="board" instance=ExtResource("2_pu738")]
+mao_container = NodePath("../PlayerHand")
+
+[node name="PlayerHand" type="HBoxContainer" parent="board"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="board"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -15.5
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Turno"
