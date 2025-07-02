@@ -60,6 +60,7 @@ func remover_da_mao(carta: CardBase):
 #	carta.queue_free()
 
 func iniciar_turno_jogador():
+	atualizar_label_vida()
 	var qtd_faltando = max_cartas_mao - cartas_na_mao.size()
 	if qtd_faltando > 0:
 		comprar_cartas(qtd_faltando)
