@@ -51,5 +51,7 @@ offset_bottom = 40.0
 
 [node name="ButtonTurn" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 253.0
+offset_top = 129.0
+offset_right = 261.0
+offset_bottom = 137.0

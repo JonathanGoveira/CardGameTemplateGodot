@@ -14,7 +14,7 @@ script = ExtResource("1_fvrhc")
 grade_container_path = NodePath("PainelPrincipal/GradeCartas")
 carta_selectable_scene = ExtResource("2_divfe")
 label_contador_path = NodePath("PainelPrincipal/LinhaInferior/CartasSelecionadas")
-botao_iniciar_path = NodePath("PainelPrincipal/LinhaInferior/Button")
+botao_iniciar_path = NodePath("PainelPrincipal/LinhaInferior/Start")
 
 [node name="PainelPrincipal" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -36,6 +36,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Selecionadas: "
 
-[node name="Button" type="Button" parent="PainelPrincipal/LinhaInferior"]
+[node name="Start" type="Button" parent="PainelPrincipal/LinhaInferior"]
 layout_mode = 2
 text = "Iniciar"
