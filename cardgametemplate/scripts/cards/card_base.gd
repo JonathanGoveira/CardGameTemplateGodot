@@ -4,10 +4,11 @@ class_name CardBase
 @export var dados: CardData
 var habilidade: int
 var mana_acoplada: int = 0
+signal carta_jogada(carta: CardBase)
 
 func _ready() -> void:
 	atualizar_ui()
-
+	
 	# Garante que o node detecta cliques
 	mouse_filter = Control.MOUSE_FILTER_STOP
 
@@ -26,6 +27,11 @@ func atualizar_ui():
 	$dano.text = str(dados.dano_base)
 	$descricaoDom.text = dados.descricao_dom
 
+func jogar():
+	print("Carta jogada:", dados.nome)
+	emit_signal("carta_jogada", self)
+	queue_free()
+
 # Início do drag
 func _get_drag_data(at_position: Vector2) -> Variant:
 	print("Iniciando drag da carta: ", dados.nome)
@@ -34,7 +40,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 	preview.modulate = Color(1, 1, 1, 0.6)
 	set_drag_preview(preview)
 	return self
-
+	
 # Obrigatório mesmo que não use
 func _can_drop_data(_position, data):
 	return false

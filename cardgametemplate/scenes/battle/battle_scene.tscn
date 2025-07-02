@@ -8,6 +8,10 @@
 
 [node name="UIManager" type="CanvasLayer" parent="."]
 
+[node name="DeckVida" type="Label" parent="UIManager"]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="AudioManager" type="Node" parent="."]
 
 [node name="TurnManager" type="Node" parent="."]
@@ -36,8 +40,17 @@ grow_horizontal = 2
 [node name="Inimigo" parent="board/Enemies" instance=ExtResource("3_pu738")]
 layout_mode = 2
 
+[node name="Inimigo2" parent="board/Enemies" instance=ExtResource("3_pu738")]
+layout_mode = 2
+vida = 8
+
+[node name="Inimigo3" parent="board/Enemies" instance=ExtResource("3_pu738")]
+layout_mode = 2
+vida = 3
+
 [node name="PlayerDeck" parent="board" instance=ExtResource("2_pu738")]
 mao_container = NodePath("../PlayerHand")
+deck_vida_label_path = NodePath("../../UIManager/DeckVida")
 
 [node name="PlayerHand" type="HBoxContainer" parent="board"]
 layout_mode = 1
@@ -64,4 +77,6 @@ offset_top = -15.5
 offset_bottom = 15.5
 grow_horizontal = 0
 grow_vertical = 2
-text = "Turno"
+text = "Encerrar turn"
+
+[connection signal="pressed" from="board/Button" to="TurnManager" method="_on_button_pressed"]

@@ -30,5 +30,4 @@ func _drop_data(_pos, data):
 			atualizar_vida()
 		
 		# Remove carta do campo
-		data.get_parent().remove_child(data)
-		data.queue_free()  # ou retornar_ao_deck() se preferir reaproveitar
+		data.jogar()
