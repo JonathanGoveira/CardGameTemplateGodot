@@ -1,7 +1,7 @@
 extends Control
 class_name CardBase
 
-@export var dados: CardData
+var dados: CardData
 var habilidade: int
 var mana_acoplada: int = 0
 signal carta_jogada(carta: CardBase)

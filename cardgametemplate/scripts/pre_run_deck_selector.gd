@@ -62,6 +62,8 @@ func atualizar_ui():
 
 func on_start_pressed() -> void:
 	GameState.cartas_selecionadas = selecionadas.duplicate()
-	var caminho_batalha = "res://scenes/battle/battle_scene.tscn"
-	get_tree().change_scene_to_file(caminho_batalha)
+	RunManager.iniciar_run()
+
+	#var caminho_batalha = "res://scenes/battle/battle_scene.tscn"
+	#get_tree().change_scene_to_file(caminho_batalha)
 	print("Mudando para a cena de batalha...")

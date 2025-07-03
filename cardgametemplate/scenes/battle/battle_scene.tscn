@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://yuveqbc7xvx4"]
+[gd_scene load_steps=5 format=3 uid="uid://yuveqbc7xvx4"]
 
 [ext_resource type="Script" uid="uid://c8s1juegtk8cj" path="res://scripts/cards/turn_manager.gd" id="2_6iigb"]
-[ext_resource type="PackedScene" uid="uid://bi6o4an0e0vai" path="res://scenes/battle/player_deck_manager.tscn" id="2_pu738"]
-[ext_resource type="PackedScene" uid="uid://coxglu8wkptdt" path="res://scenes/battle/enemy_board.tscn" id="3_pu738"]
+[ext_resource type="PackedScene" uid="uid://bi6o4an0e0vai" path="res://scenes/cards/player_deck_manager.tscn" id="2_pu738"]
+[ext_resource type="Script" uid="uid://dvc6csjlna2ct" path="res://scripts/enemy/enemy_manager.gd" id="2_ugm31"]
+[ext_resource type="PackedScene" uid="uid://i4anp6bcp3mh" path="res://scenes/enemy/enemy_base.tscn" id="3_ugm31"]
 
 [node name="GameManager" type="Node"]
 
@@ -27,6 +28,11 @@ anchors_preset = 0
 offset_right = 248.0
 offset_bottom = 128.0
 
+[node name="EnemyManager" type="Node" parent="board"]
+script = ExtResource("2_ugm31")
+enemy_board_path = NodePath("../Enemies")
+enemy_scene = ExtResource("3_ugm31")
+
 [node name="Enemies" type="HBoxContainer" parent="board"]
 layout_mode = 1
 anchors_preset = 5
@@ -36,17 +42,6 @@ offset_left = -40.0
 offset_right = 40.0
 offset_bottom = 120.0
 grow_horizontal = 2
-
-[node name="Inimigo" parent="board/Enemies" instance=ExtResource("3_pu738")]
-layout_mode = 2
-
-[node name="Inimigo2" parent="board/Enemies" instance=ExtResource("3_pu738")]
-layout_mode = 2
-vida = 8
-
-[node name="Inimigo3" parent="board/Enemies" instance=ExtResource("3_pu738")]
-layout_mode = 2
-vida = 3
 
 [node name="PlayerDeck" parent="board" instance=ExtResource("2_pu738")]
 mao_container = NodePath("../PlayerHand")

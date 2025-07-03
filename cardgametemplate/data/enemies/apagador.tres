@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3 uid="uid://djxx8a3tuwio3"]
+[gd_resource type="Resource" script_class="EnemyData" load_steps=3 format=3 uid="uid://djxx8a3tuwio3"]
 
+[ext_resource type="Texture2D" uid="uid://dexjo8dq6rvxq" path="res://icon.svg" id="1_damsu"]
 [ext_resource type="Script" uid="uid://bp83qvf8bcjla" path="res://scripts/enemy/enemy_data.gd" id="1_o4ktm"]
 
 [resource]
 script = ExtResource("1_o4ktm")
-nome = ""
-dano_base = 0
-vida_base = 0
+imagem_carta = ExtResource("1_damsu")
+nome = "Apagador"
+dano_base = 2
+vida_base = 4
 metadata/_custom_type_script = "uid://bp83qvf8bcjla"
