@@ -1,28 +1,47 @@
 extends Node
+class_name EnemyManager
 
-@export var enemy_board_path: NodePath
-@export var enemy_scene: PackedScene
-@export var pasta_inimigos: String = "res://data/enemies"
+@export var enemy_scene: PackedScene  # Cena única: ex: res://scenes/enemy/enemy_base.tscn
+@export var enemy_board_path: NodePath = "../Enemies"
+
+var inimigos_data: Array = []
 
 func _ready():
-	var inimigo_files = listar_inimigos(pasta_inimigos)
-	var enemy_board = get_node(enemy_board_path)
+	# Carrega os inimigos da batalha atual definidos no RunManager
+	carregar_inimigos(RunManager.inimigos_da_batalha)
 
-	for path in inimigo_files:
-		var data = load(path)
-		if data is EnemyData:
-			var inimigo = enemy_scene.instantiate()
-			inimigo.dados = data
-			enemy_board.add_child(inimigo)
+func carregar_inimigos(lista: Array):
+	inimigos_data = lista
+	var board = get_node(enemy_board_path)
 
-func listar_inimigos(caminho: String) -> Array:
-	var lista = []
-	var dir = DirAccess.open(caminho)
-	if dir:
-		dir.list_dir_begin()
-		var file = dir.get_next()
-		while file != "":
-			if not dir.current_is_dir() and file.ends_with(".tres"):
-				lista.append(caminho + "/" + file)
-			file = dir.get_next()
-	return lista
+	# Limpa inimigos anteriores
+	for child in board.get_children():
+		child.queue_free()
+
+	# Instancia inimigos com progressão
+	for dados in lista:
+		var inimigo = enemy_scene.instantiate()
+		
+		# Seta os dados
+		inimigo.dados = dados
+
+		# Escala a vida com base na progressão da run
+		var base_vida = dados.vida_base
+		var multiplicador = RunManager.numero_da_batalha
+		inimigo.vida = base_vida + (multiplicador * 2)
+
+		# Atualiza UI (se o método existir)
+		if inimigo.has_method("atualizar_vida"):
+			inimigo.atualizar_vida()
+
+		board.add_child(inimigo)
+
+func get_inimigos() -> Array:
+	var board = get_node(enemy_board_path)
+	return board.get_children()
+
+func todos_derrotados() -> bool:
+	for inimigo in get_inimigos():
+		if is_instance_valid(inimigo):
+			return false
+	return true

@@ -30,7 +30,6 @@ offset_bottom = 128.0
 
 [node name="EnemyManager" type="Node" parent="board"]
 script = ExtResource("2_ugm31")
-enemy_board_path = NodePath("../Enemies")
 enemy_scene = ExtResource("3_ugm31")
 
 [node name="Enemies" type="HBoxContainer" parent="board"]
