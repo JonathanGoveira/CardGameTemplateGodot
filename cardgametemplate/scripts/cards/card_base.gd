@@ -4,7 +4,7 @@ class_name CardBase
 var dados: CardData
 var habilidade: int
 var mana_acoplada: int = 0
-signal carta_jogada(carta: CardBase)
+signal carta_jogada(carta)
 
 func _ready() -> void:
 	atualizar_ui()

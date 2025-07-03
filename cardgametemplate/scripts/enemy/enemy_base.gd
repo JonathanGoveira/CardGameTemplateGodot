@@ -33,8 +33,9 @@ func _drop_data(_pos, data):
 			queue_free()
 		else:
 			atualizar_vida()
-
+		
 		# Remove a carta da mão visualmente
+		data.emit_signal("carta_jogada", data)
 		if data.get_parent():
 			data.get_parent().remove_child(data)
 		data.queue_free()

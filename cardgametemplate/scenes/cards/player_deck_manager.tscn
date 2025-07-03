@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bi6o4an0e0vai"]
 
-[ext_resource type="Script" uid="uid://bgiwrxu11p2yt" path="res://scripts/battle/deck_manager.gd" id="1_fm1m1"]
+[ext_resource type="Script" uid="uid://bgiwrxu11p2yt" path="res://scripts/cards/deck_manager.gd" id="1_fm1m1"]
 [ext_resource type="PackedScene" uid="uid://b2f0gstxcgifp" path="res://scenes/cards/card_base.tscn" id="2_71vvo"]
 
 [node name="PlayerDeck" type="Node"]

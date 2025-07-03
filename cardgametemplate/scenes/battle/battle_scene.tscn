@@ -7,6 +7,16 @@
 
 [node name="GameManager" type="Node"]
 
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -30.0
+offset_right = 30.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Batalha"
+
 [node name="UIManager" type="CanvasLayer" parent="."]
 
 [node name="DeckVida" type="Label" parent="UIManager"]
@@ -20,6 +30,7 @@ script = ExtResource("2_6iigb")
 botao_encerrar_turno_path = NodePath("../board/Button")
 enemy_board_path = NodePath("../board/Enemies")
 deck_manager_path = NodePath("../board/PlayerDeck")
+enemy_manager_path = NodePath("../board/EnemyManager")
 
 [node name="board" type="Control" parent="."]
 custom_minimum_size = Vector2(640, 360)

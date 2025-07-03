@@ -10,7 +10,7 @@ var fase_atual: Fase = Fase.JOGADOR
 @export var botao_encerrar_turno_path: NodePath
 @export var enemy_board_path: NodePath
 @export var deck_manager_path: NodePath
-
+@export var enemy_manager_path: NodePath
 func _ready():
 	iniciar_turno_jogador()
 
@@ -40,14 +40,20 @@ func iniciar_turno_inimigos() -> void:
 	var deck = get_node(deck_manager_path)
 
 	for inimigo in inimigos:
-		#if inimigo.has_method("get_dano"):
-		#	var dano = inimigo.get_dano()
-		#	print("Inimigo causa", dano, "de dano ao deck.")
-		#	deck.sofrer_dano(dano)
-		#	await get_tree().create_timer(0.5).timeout  # Delay entre ataques
+		# inimigo causa dano futuramente
 		print(inimigo, " Agindo")
+		await get_tree().create_timer(0.5).timeout
+
 	await get_tree().create_timer(0.8).timeout
-	iniciar_turno_jogador()
+	var enemy_manager = get_node(enemy_manager_path)
+	if enemy_manager.todos_derrotados():
+
+		print("🏆 Vitória! Todos os inimigos foram derrotados.")
+		await get_tree().create_timer(1).timeout
+		RunManager.ir_para_draft()
+	else:
+		iniciar_turno_jogador()
+
 
 
 func _on_button_pressed() -> void:
