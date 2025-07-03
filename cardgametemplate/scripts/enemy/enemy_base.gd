@@ -2,7 +2,7 @@ extends Control
 class_name EnemyBase
 
 @export var dados: EnemyData  # Resource que carrega nome, sprite, vida_base, etc
-@export var vida: int = 10
+var vida: int
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
@@ -15,6 +15,8 @@ func _ready() -> void:
 		$Nome.text = dados.nome
 		$TextureRect.texture = dados.imagem_carta
 		vida = dados.vida_base
+		$Dano.text = str("⚔️ ", dados.dano_base)
+		
 	atualizar_vida()
 
 func atualizar_vida():

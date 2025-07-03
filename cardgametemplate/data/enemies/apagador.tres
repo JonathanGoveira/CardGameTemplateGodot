@@ -7,6 +7,6 @@
 script = ExtResource("1_o4ktm")
 imagem_carta = ExtResource("1_damsu")
 nome = "Apagador"
-dano_base = 2
+dano_base = 1
 vida_base = 4
 metadata/_custom_type_script = "uid://bp83qvf8bcjla"
