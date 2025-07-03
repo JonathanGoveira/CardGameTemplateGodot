@@ -8,7 +8,7 @@ extends Node
 
 
 # Cartas iniciais reais do deck
-@export var cartas_iniciais: Array[Resource]  # Esperado: CardData
+#@export var cartas_iniciais: Array[Resource]  # Esperado: CardData
 
 var deck: Array[CardData] = []
 var cartas_na_mao: Array = []

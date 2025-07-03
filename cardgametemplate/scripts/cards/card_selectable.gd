@@ -14,7 +14,7 @@ func atualizar_ui():
 	$TextureRect.texture = dados.imagem_carta
 	$Nome.text = dados.nome
 	$Dano.text = str(dados.dano_base)
-	$Dom.text = dados.descricao_dom
+	$Especie.text = str(dados.especie)
 	$MarcadorSelecionado.visible = selecionada
 
 func _gui_input(event):

@@ -16,6 +16,7 @@ grade_container_path = NodePath("PainelPrincipal/GradeCartas")
 carta_selectable_scene = ExtResource("2_divfe")
 label_contador_path = NodePath("LinhaInferior/CartasSelecionadas")
 botao_iniciar_path = NodePath("LinhaInferior/Start")
+path_data = "res://data/cards/"
 
 [node name="PainelPrincipal" type="VBoxContainer" parent="."]
 layout_mode = 1

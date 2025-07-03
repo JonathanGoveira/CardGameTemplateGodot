@@ -5,12 +5,12 @@ extends Control
 @export var label_contador_path: NodePath
 @export var botao_iniciar_path: NodePath
 @export var max_cartas_selecionadas: int = 8
-
+@export var path_data: String
 var selecionadas: Array[CardData] = []
 
 func _ready():
 	var grade = get_node(grade_container_path)
-	var arquivos_cartas = listar_todos_cards("res://scripts/cards/data")
+	var arquivos_cartas = listar_todos_cards(path_data)
 
 	for caminho in arquivos_cartas:
 		var dados = load(caminho)

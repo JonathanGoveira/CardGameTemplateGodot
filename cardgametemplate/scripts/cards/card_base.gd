@@ -14,18 +14,18 @@ func _ready() -> void:
 
 	# Faz os filhos visuais ignorarem o clique
 	$TextureRect.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$nome.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$dano.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	$descricaoDom.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Nome.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Dano.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	$Especie.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func atualizar_ui():
 	if dados == null:
 		return
 
 	$TextureRect.texture = dados.imagem_carta
-	$nome.text = dados.nome
-	$dano.text = str(dados.dano_base)
-	$descricaoDom.text = dados.descricao_dom
+	$Nome.text = dados.nome
+	$Dano.text = str(dados.dano_base)
+	$Especie.text = dados.especie
 
 func jogar():
 	print("Carta jogada:", dados.nome)

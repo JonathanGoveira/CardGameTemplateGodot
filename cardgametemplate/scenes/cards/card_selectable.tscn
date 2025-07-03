@@ -29,34 +29,48 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Nome" type="Label" parent="."]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 16.0
-offset_right = 66.0
-offset_bottom = 39.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.575
+anchor_top = 0.133333
+anchor_right = 0.575
+anchor_bottom = 0.133333
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
 label_settings = SubResource("LabelSettings_qed0t")
+metadata/_edit_use_anchors_ = true
 
 [node name="Dano" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_bottom = 0.112
-offset_left = 1.0
-offset_top = 12.0
-offset_right = 23.0
-offset_bottom = 21.56
+anchor_top = 0.108333
+anchor_bottom = 0.108333
+offset_right = 22.0
+offset_bottom = 20.0
 label_settings = SubResource("LabelSettings_l1gix")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="Dom" type="Label" parent="."]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 45.0
-offset_right = 72.0
-offset_bottom = 107.0
+[node name="Especie" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.633333
+anchor_right = 0.5
+anchor_bottom = 0.633333
+offset_left = -31.0
+offset_top = -31.0
+offset_right = 31.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
 label_settings = SubResource("LabelSettings_diqu7")
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="MarcadorSelecionado" type="ColorRect" parent="."]
 layout_mode = 0

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://0n5l5kkek0l1" path="res://scripts/cards/card_base.gd" id="1_gqcvk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vvmxj"]
-font_size = 15
+font_size = 10
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
@@ -12,7 +12,7 @@ outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_uh4ib"]
-font_size = 9
+font_size = 7
 outline_size = 1
 outline_color = Color(0, 0, 0, 1)
 
@@ -20,40 +20,57 @@ outline_color = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(80, 120)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 80.0
+offset_bottom = 120.0
 mouse_default_cursor_shape = 2
 script = ExtResource("1_gqcvk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
+layout_mode = 1
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
 
-[node name="nome" type="Label" parent="."]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 12.0
-offset_right = 63.0
-offset_bottom = 35.0
+[node name="Nome" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5875
+anchor_top = 0.125
+anchor_right = 0.5875
+anchor_bottom = 0.125
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
 label_settings = SubResource("LabelSettings_vvmxj")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="dano" type="Label" parent="."]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 12.0
-offset_right = 20.0
-offset_bottom = 35.0
+[node name="Dano" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 0.1
+anchor_right = 0.025
+anchor_bottom = 0.1
+offset_right = 18.0
+offset_bottom = 23.0
 label_settings = SubResource("LabelSettings_sf5il")
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="descricaoDom" type="Label" parent="."]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 40.0
-offset_right = 80.0
-offset_bottom = 98.0
+[node name="Especie" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.575
+anchor_top = 0.908333
+anchor_right = 0.575
+anchor_bottom = 0.908333
+offset_left = -35.0
+offset_top = -58.0
+offset_right = 35.0
+grow_horizontal = 2
+grow_vertical = 0
 label_settings = SubResource("LabelSettings_uh4ib")
 autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
