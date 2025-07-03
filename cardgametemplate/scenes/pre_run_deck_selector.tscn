@@ -12,10 +12,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_fvrhc")
-grade_container_path = NodePath("PainelPrincipal/GradeCartas")
+grade_container_path = NodePath("PainelPrincipal/ScrollContainer/GradeCartas")
 carta_selectable_scene = ExtResource("2_divfe")
 label_contador_path = NodePath("LinhaInferior/CartasSelecionadas")
 botao_iniciar_path = NodePath("LinhaInferior/Start")
+max_cartas_selecionadas = 10
 path_data = "res://data/cards/"
 
 [node name="PainelPrincipal" type="VBoxContainer" parent="."]
@@ -33,7 +34,13 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Relembre"
 
-[node name="GradeCartas" type="GridContainer" parent="PainelPrincipal"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelPrincipal"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="GradeCartas" type="GridContainer" parent="PainelPrincipal/ScrollContainer"]
 layout_mode = 2
 columns = 4
 

@@ -4,6 +4,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_qed0t"]
 font_size = 9
+font_color = Color(0.256503, 0.121573, 0.345669, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_l1gix"]
 font_size = 14
@@ -14,6 +15,7 @@ resource_local_to_scene = true
 line_spacing = 1.0
 paragraph_spacing = 1.0
 font_size = 7
+font_color = Color(0.800458, 0.653204, 0.992393, 1)
 
 [node name="CardSelectable" type="Control"]
 custom_minimum_size = Vector2(80, 120)

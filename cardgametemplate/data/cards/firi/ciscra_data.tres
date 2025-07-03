@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=5 format=3 uid="uid://darjmnih7jvqr"]
+
+[ext_resource type="Script" uid="uid://dfv4llsl86v8q" path="res://scripts/cards/effects/lumestral/krav_effect.gd" id="1_0obr7"]
+[ext_resource type="Texture2D" uid="uid://8fae1hn3xobh" path="res://assets/lumestral.png" id="2_filw6"]
+[ext_resource type="Script" uid="uid://1crh8aj4cmt3" path="res://scripts/cards/card_data.gd" id="3_y5tf3"]
+
+[sub_resource type="Resource" id="Resource_chkxl"]
+script = ExtResource("1_0obr7")
+metadata/_custom_type_script = "uid://dfv4llsl86v8q"
+
+[resource]
+script = ExtResource("3_y5tf3")
+imagem_carta = ExtResource("2_filw6")
+nome = "Ciscra"
+reino = "Firi"
+especie = "Faiscão"
+dano_base = 3
+descricao_dom = ""
+dom = SubResource("Resource_chkxl")
+metadata/_custom_type_script = "uid://1crh8aj4cmt3"
