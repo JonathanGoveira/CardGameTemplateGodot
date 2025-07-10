@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://bdfm1l71rn4tq" path="res://scripts/cards/card_selectable.gd" id="1_7h8ka"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qed0t"]
-font_size = 9
-font_color = Color(0.256503, 0.121573, 0.345669, 1)
+font_size = 12
+outline_size = 1
+outline_color = Color(0.454902, 0.266667, 0.690196, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_l1gix"]
 font_size = 14
@@ -14,8 +15,7 @@ shadow_size = 2
 resource_local_to_scene = true
 line_spacing = 1.0
 paragraph_spacing = 1.0
-font_size = 7
-font_color = Color(0.800458, 0.653204, 0.992393, 1)
+font_size = 10
 
 [node name="CardSelectable" type="Control"]
 custom_minimum_size = Vector2(80, 120)
@@ -26,53 +26,48 @@ offset_bottom = 40.0
 script = ExtResource("1_7h8ka")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(80, 120)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+expand_mode = 1
 
 [node name="Nome" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.575
-anchor_top = 0.133333
-anchor_right = 0.575
-anchor_bottom = 0.133333
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
 offset_left = -20.0
 offset_right = 20.0
 offset_bottom = 23.0
 grow_horizontal = 2
 label_settings = SubResource("LabelSettings_qed0t")
-metadata/_edit_use_anchors_ = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Dano" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.108333
-anchor_bottom = 0.108333
 offset_right = 22.0
 offset_bottom = 20.0
 label_settings = SubResource("LabelSettings_l1gix")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="Especie" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.633333
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.633333
+anchor_bottom = 1.0
 offset_left = -31.0
-offset_top = -31.0
+offset_top = -62.0
 offset_right = 31.0
-offset_bottom = 31.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 label_settings = SubResource("LabelSettings_diqu7")
 autowrap_mode = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="MarcadorSelecionado" type="ColorRect" parent="."]
 layout_mode = 0

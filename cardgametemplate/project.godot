@@ -11,14 +11,15 @@ config_version=5
 [application]
 
 config/name="CardGameTemplate"
-run/main_scene="uid://cqvjbvtl0q3go"
+run/main_scene="uid://b1jhiguonk72p"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-GameState="*res://scripts/singletons/gamestate.gd"
+DeckData="*res://scripts/singletons/deckdata.gd"
 RunManager="*res://scripts/enemy/run_manager.gd"
+TooltipManager="*res://scripts/singletons/tooltipmanager.gd"
 
 [display]
 

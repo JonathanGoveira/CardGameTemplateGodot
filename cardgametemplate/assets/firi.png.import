@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crdew7cv1q25w"
-path="res://.godot/imported/drelvara.png-82eed9333ddeab84335c3f294eabb692.ctex"
+uid="uid://8nntx1gohicx"
+path="res://.godot/imported/firi.png-b8aba4dc13c9b68436ce64ac000064ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/drelvara.png"
-dest_files=["res://.godot/imported/drelvara.png-82eed9333ddeab84335c3f294eabb692.ctex"]
+source_file="res://assets/firi.png"
+dest_files=["res://.godot/imported/firi.png-b8aba4dc13c9b68436ce64ac000064ee.ctex"]
 
 [params]
 

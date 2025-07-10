@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqvjbvtl0q3go"]
+
+[ext_resource type="Script" uid="uid://bldv8kkap1de" path="res://scripts/pre_run_deck_selector.gd" id="1_fvrhc"]
+[ext_resource type="PackedScene" uid="uid://cj2t3os33leus" path="res://scenes/cards/card_selectable.tscn" id="2_divfe"]
+
+[node name="PreRunDeckSelector" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fvrhc")
+grade_container_path = NodePath("PainelPrincipal/ScrollContainer/GradeCartas")
+carta_selectable_scene = ExtResource("2_divfe")
+label_contador_path = NodePath("LinhaInferior/CartasSelecionadas")
+botao_iniciar_path = NodePath("LinhaInferior/Start")
+max_cartas_selecionadas = 10
+path_data = "res://data/cards/"
+
+[node name="PainelPrincipal" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.0
+offset_right = 85.0
+offset_bottom = 62.0
+grow_horizontal = 2
+
+[node name="Titulo" type="Label" parent="PainelPrincipal"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Relembre"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PainelPrincipal"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="GradeCartas" type="GridContainer" parent="PainelPrincipal/ScrollContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="LinhaInferior" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -31.0
+offset_right = 85.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CartasSelecionadas" type="Label" parent="LinhaInferior"]
+layout_mode = 2
+text = "Selecionadas: "
+
+[node name="Start" type="Button" parent="LinhaInferior"]
+layout_mode = 2
+text = "Iniciar"
+
+[connection signal="pressed" from="LinhaInferior/Start" to="." method="on_start_pressed"]

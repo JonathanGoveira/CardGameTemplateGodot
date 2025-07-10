@@ -61,7 +61,7 @@ func atualizar_ui():
 
 
 func on_start_pressed() -> void:
-	GameState.cartas_selecionadas = selecionadas.duplicate()
+	DeckData.deck_atual = selecionadas.duplicate()
 	RunManager.iniciar_run()
 
 	#var caminho_batalha = "res://scenes/battle/battle_scene.tscn"

@@ -15,7 +15,7 @@ var cartas_na_mao: Array = []
 
 func _ready():
 	# Clona as cartas para o deck (evita sobrescrever o resource original)
-	for carta_resource in GameState.cartas_selecionadas:
+	for carta_resource in DeckData.deck_atual:
 		var copia = carta_resource.duplicate()
 		deck.append(copia)
 

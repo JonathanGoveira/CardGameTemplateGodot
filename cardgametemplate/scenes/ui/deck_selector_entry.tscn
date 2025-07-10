@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://fgqc8vqdyiqs"]
+
+[ext_resource type="Script" uid="uid://iko8j232i4o8" path="res://scripts/deck/deck_selector_entry.gd" id="1_s00ij"]
+
+[node name="DeckSelectorEntry" type="VBoxContainer"]
+custom_minimum_size = Vector2(80, 120)
+offset_right = 80.0
+offset_bottom = 120.0
+script = ExtResource("1_s00ij")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+
+[node name="NomeReino" type="Label" parent="TextureButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -11.5
+offset_right = 80.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+
+[node name="Editar" type="Button" parent="."]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Editar"
