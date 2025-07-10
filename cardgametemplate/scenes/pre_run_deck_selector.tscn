@@ -58,7 +58,7 @@ icone = ExtResource("3_6byyk")
 
 [node name="Deck" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Baralho Selecionado: "
+text = "Nenhum baralho selecionado"
 
 [node name="Iniciar" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -67,3 +67,4 @@ size_flags_vertical = 8
 text = "Iniciar Run"
 
 [connection signal="deck_selecionado" from="MarginContainer/VBoxContainer/Decks/DeckSelectorEntry" to="." method="_on_deck_selecionado"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Iniciar" to="." method="_on_start_pressed"]
