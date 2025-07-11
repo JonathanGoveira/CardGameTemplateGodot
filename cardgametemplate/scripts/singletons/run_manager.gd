@@ -8,7 +8,7 @@ var doms_coletados: Array = []
 
 ## Caminhos das cenas principais
 const BATALHA = "res://scenes/battle/battle_scene.tscn"
-const DRAFT = "res://scenes/draft.tscn"
+const DRAFT = "res://scenes/run/draft.tscn"
 var inimigo_base_path = "res://data/enemies/apagador.tres"
 
 ## Lista de inimigos das batalhas da run

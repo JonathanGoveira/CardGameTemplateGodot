@@ -7,70 +7,74 @@
 
 [node name="GameManager" type="Node"]
 
-[node name="Label" type="Label" parent="."]
+[node name="UIManager" type="CanvasLayer" parent="."]
+
+[node name="board" type="Control" parent="UIManager"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIManager/board"]
+custom_minimum_size = Vector2(0, 360)
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -30.0
 offset_right = 30.0
-offset_bottom = 23.0
+offset_bottom = 31.0
 grow_horizontal = 2
+
+[node name="Label" type="Label" parent="UIManager/board/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 text = "Batalha"
+horizontal_alignment = 1
 
-[node name="UIManager" type="CanvasLayer" parent="."]
+[node name="Enemies" type="HBoxContainer" parent="UIManager/board/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 
-[node name="DeckVida" type="Label" parent="UIManager"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="PlayerHand" type="HBoxContainer" parent="UIManager/board/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
 
-[node name="AudioManager" type="Node" parent="."]
+[node name="DeckVida" type="Label" parent="UIManager/board"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 8
 
-[node name="TurnManager" type="Node" parent="."]
-script = ExtResource("2_6iigb")
-botao_encerrar_turno_path = NodePath("../board/Button")
-enemy_board_path = NodePath("../board/Enemies")
-deck_manager_path = NodePath("../board/PlayerDeck")
-enemy_manager_path = NodePath("../board/EnemyManager")
-
-[node name="board" type="Control" parent="."]
-custom_minimum_size = Vector2(640, 360)
-layout_mode = 3
-anchors_preset = 0
-offset_right = 248.0
-offset_bottom = 128.0
-
-[node name="EnemyManager" type="Node" parent="board"]
+[node name="EnemyManager" type="Node" parent="UIManager/board"]
 script = ExtResource("2_ugm31")
 enemy_scene = ExtResource("3_ugm31")
+enemy_board_path = NodePath("../VBoxContainer/Enemies")
 
-[node name="Enemies" type="HBoxContainer" parent="board"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -40.0
-offset_right = 40.0
-offset_bottom = 120.0
-grow_horizontal = 2
+[node name="PlayerDeck" parent="UIManager/board" instance=ExtResource("2_pu738")]
+mao_container = NodePath("../VBoxContainer/PlayerHand")
+deck_vida_label_path = NodePath("../DeckVida")
 
-[node name="PlayerDeck" parent="board" instance=ExtResource("2_pu738")]
-mao_container = NodePath("../PlayerHand")
-deck_vida_label_path = NodePath("../../UIManager/DeckVida")
-
-[node name="PlayerHand" type="HBoxContainer" parent="board"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -20.0
-offset_top = -40.0
-offset_right = 20.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Button" type="Button" parent="board"]
+[node name="Button" type="Button" parent="UIManager/board"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -84,4 +88,13 @@ grow_horizontal = 0
 grow_vertical = 2
 text = "Encerrar turn"
 
-[connection signal="pressed" from="board/Button" to="TurnManager" method="_on_button_pressed"]
+[node name="AudioManager" type="Node" parent="."]
+
+[node name="TurnManager" type="Node" parent="."]
+script = ExtResource("2_6iigb")
+botao_encerrar_turno_path = NodePath("../UIManager/board/Button")
+enemy_board_path = NodePath("../UIManager/board/VBoxContainer/Enemies")
+deck_manager_path = NodePath("../UIManager/board/PlayerDeck")
+enemy_manager_path = NodePath("../UIManager/board/EnemyManager")
+
+[connection signal="pressed" from="UIManager/board/Button" to="TurnManager" method="_on_button_pressed"]

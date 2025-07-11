@@ -2,7 +2,7 @@
 extends Node
 
 @export var carta_base_scene: PackedScene
-@export var mao_container: NodePath = "Board/PlayerHand"
+@export var mao_container: NodePath 
 @export var max_cartas_mao: int = 3
 @export var deck_vida_label_path: NodePath
 

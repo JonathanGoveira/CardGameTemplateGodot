@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1jhiguonk72p"]
 
-[ext_resource type="PackedScene" uid="uid://fgqc8vqdyiqs" path="res://scenes/ui/deck_selector_entry.tscn" id="1_divfe"]
-[ext_resource type="Script" uid="uid://c5852ywmwhbdo" path="res://scripts/run/pre_run_deck_selector.gd" id="1_psnrv"]
-[ext_resource type="Texture2D" uid="uid://8nntx1gohicx" path="res://assets/firi.png" id="2_rojc3"]
-[ext_resource type="Texture2D" uid="uid://bagirtxo103se" path="res://assets/placeholder.png" id="3_6byyk"]
+[ext_resource type="Script" uid="uid://c5852ywmwhbdo" path="res://scripts/run/pre_run_deck_selector.gd" id="1_56gug"]
+[ext_resource type="PackedScene" uid="uid://fgqc8vqdyiqs" path="res://scenes/run/deck_selector_entry.tscn" id="2_oj2ab"]
+[ext_resource type="Texture2D" uid="uid://8nntx1gohicx" path="res://assets/firi.png" id="3_hxkwe"]
+[ext_resource type="Texture2D" uid="uid://bagirtxo103se" path="res://assets/placeholder.png" id="4_fhdw5"]
 
 [node name="PreRunDeckSelector" type="Control"]
 layout_mode = 3
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_psnrv")
+script = ExtResource("1_56gug")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -36,25 +36,25 @@ size_flags_vertical = 4
 [node name="Decks" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="DeckSelectorEntry" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("1_divfe")]
+[node name="DeckSelectorEntry" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("2_oj2ab")]
 layout_mode = 2
 nome_reino = "Firi"
-icone = ExtResource("2_rojc3")
+icone = ExtResource("3_hxkwe")
 
-[node name="DeckSelectorEntry2" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("1_divfe")]
+[node name="DeckSelectorEntry2" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("2_oj2ab")]
 layout_mode = 2
 nome_reino = "Gluba"
-icone = ExtResource("3_6byyk")
+icone = ExtResource("4_fhdw5")
 
-[node name="DeckSelectorEntry3" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("1_divfe")]
+[node name="DeckSelectorEntry3" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("2_oj2ab")]
 layout_mode = 2
 nome_reino = "Trufi"
-icone = ExtResource("3_6byyk")
+icone = ExtResource("4_fhdw5")
 
-[node name="DeckSelectorEntry4" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("1_divfe")]
+[node name="DeckSelectorEntry4" parent="MarginContainer/VBoxContainer/Decks" instance=ExtResource("2_oj2ab")]
 layout_mode = 2
 nome_reino = "Penuva"
-icone = ExtResource("3_6byyk")
+icone = ExtResource("4_fhdw5")
 
 [node name="Deck" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
